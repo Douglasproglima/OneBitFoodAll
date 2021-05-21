@@ -1,3 +1,9 @@
+#require 'api_constraints'
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  scope '/api/v1/', defaults: { format: :json } do
+    resources :categories, only: [:index]
+    resources :restaurants, only: [:index, :show]
+    resources :orders, only: [:create, :show]
+    resources :avaliable_cities, only: [:index]
+  end
 end
