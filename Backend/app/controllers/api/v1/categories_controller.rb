@@ -1,4 +1,5 @@
-class Api::V1::CategoriesController < ApplicationController
+class Api::V1::CategoriesController < Api::V1::ApiController
   def index
+    @categories = Category.all.order(:title)
   end
 end
