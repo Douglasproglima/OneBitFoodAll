@@ -3,6 +3,9 @@ class Api::V1::RestaurantsController < Api::V1::ApiController
   
   def index
     @restaurants = Restaurant.all
+    filter_by_query if params[:query]
+    filter_by_city if params[:city]
+    filter_by_category if(params[:category])
   end
 
   def show
@@ -12,5 +15,20 @@ class Api::V1::RestaurantsController < Api::V1::ApiController
 
   def set_restaurant
     @restaurant = Restaurant.find(params[:id])
+  end
+
+  # gem ransack: Auxilia na pesquisa de textos
+  def filter_by_query
+    @restaurants = @restaurants.ransack(name_or_description_cont: params[:query]).result
+  end
+
+  def filter_by_city
+    @restaurants = @restaurants.where(city: params[:city])
+  end
+
+  def filter_by_category
+    @restaurants = @restaurants.select do |r|
+      r.category.title == params[:category]
+    end
   end
 end
