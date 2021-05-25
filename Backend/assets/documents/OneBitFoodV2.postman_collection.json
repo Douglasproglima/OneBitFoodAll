@@ -1,0 +1,189 @@
+{
+  "info": {
+    "_postman_id": "064925e1-4e2e-4849-9e3e-c4f9f462325a",
+    "name": "OneBitFoodV2",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "API",
+      "item": [
+        {
+          "name": "v1",
+          "item": [
+            {
+              "name": "AvailableCities",
+              "item": [
+                {
+                  "name": "index",
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "http://localhost:3000/api/available_cities",
+                      "protocol": "http",
+                      "host": [
+                        "localhost"
+                      ],
+                      "port": "3000",
+                      "path": [
+                        "api",
+                        "available_cities"
+                      ]
+                    }
+                  },
+                  "response": []
+                }
+              ]
+            },
+            {
+              "name": "Restaurants",
+              "item": [
+                {
+                  "name": "index",
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "http://localhost:3000/api/restaurants",
+                      "protocol": "http",
+                      "host": [
+                        "localhost"
+                      ],
+                      "port": "3000",
+                      "path": [
+                        "api",
+                        "restaurants"
+                      ],
+                      "query": [
+                        {
+                          "key": "city",
+                          "value": "Curitiba",
+                          "disabled": true
+                        },
+                        {
+                          "key": "category",
+                          "value": "mexicana",
+                          "disabled": true
+                        }
+                      ]
+                    }
+                  },
+                  "response": []
+                },
+                {
+                  "name": "show",
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "http://localhost:3000/api/restaurants/10",
+                      "protocol": "http",
+                      "host": [
+                        "localhost"
+                      ],
+                      "port": "3000",
+                      "path": [
+                        "api",
+                        "restaurants",
+                        "10"
+                      ]
+                    }
+                  },
+                  "response": []
+                }
+              ]
+            },
+            {
+              "name": "Categories",
+              "item": [
+                {
+                  "name": "Index",
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "http://localhost:3000/api/categories",
+                      "protocol": "http",
+                      "host": [
+                        "localhost"
+                      ],
+                      "port": "3000",
+                      "path": [
+                        "api",
+                        "categories"
+                      ]
+                    }
+                  },
+                  "response": []
+                }
+              ]
+            },
+            {
+              "name": "Orders",
+              "item": [
+                {
+                  "name": "CREATE",
+                  "request": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"order\": {\n        \"name\": \"Leonardo Scorza\",\n        \"phone_number\": \"19997098765\",\n        \"restaurant_id\": 1,\n        \"city\": \"Curitiba\",\n        \"neighborhood\": \"Tingui\",\n        \"street\": \"Verone Piccolli\",\n        \"number\": \"115\",\n        \"complement\": \"apartamento 4\",\n        \"order_products_attributes\": [\n            { \n                \"quantity\": 1,\n                \"product_id\": 1\n            }\n        ]\n    }\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "http://localhost:3000/api/orders",
+                      "protocol": "http",
+                      "host": [
+                        "localhost"
+                      ],
+                      "port": "3000",
+                      "path": [
+                        "api",
+                        "orders"
+                      ]
+                    }
+                  },
+                  "response": []
+                },
+                {
+                  "name": "show",
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "http://localhost:3000/api/orders/1",
+                      "protocol": "http",
+                      "host": [
+                        "localhost"
+                      ],
+                      "port": "3000",
+                      "path": [
+                        "api",
+                        "orders",
+                        "1"
+                      ],
+                      "query": [
+                        {
+                          "key": "",
+                          "value": "",
+                          "disabled": true
+                        }
+                      ]
+                    }
+                  },
+                  "response": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

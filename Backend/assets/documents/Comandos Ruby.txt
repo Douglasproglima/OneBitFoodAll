@@ -1,0 +1,127 @@
+Gerar Models
+  rails g model Category title
+
+  rails g model Restaurant name description:text delivery_tax:float city street neighborhood number complement category:references
+
+  rails g model ProductCategory title restaurant:references
+
+  rails g model Product name description:text price:float product_category:references
+
+  # ANTES de rodar o rails db:migration alterar para :status, default: 0
+  rails g model Order name phone_number total_value:float city neighborhood number complement status:integer restaurant:references
+
+  rails g model OrderProduct quantity:integer order:references product:references
+
+Rodar o create para criar o banco de dados
+  rails db:create
+
+Rodar o migrate
+  rails db:migrate
+
+Gerar Controllers
+  # rails g controller nomeController actions(create index, show) e --skip-routes não irá gerar as rotas 
+  rails g controller api/v1/Categories index --skip-routes
+
+  rails g controller api/v1/Restaurants index show --skip-routes
+
+  rails g controller api/v1/Orders create show --skip-routes
+
+  # Quais cidades estão disponiveis para o usuário
+  rails g controller api/v1/AvailableCities index --skip-routes
+
+Rotas -> Onde faz mapeamento das URL's para os Controllers
+
+  # Analisar todas as rotas(irá mostrar as rotas criadas e as rotas do rails)
+    rails routes
+
+  # Analisar rota especificas
+    rails routes -g categories
+
+Trabalhando com imagens
+  Instalar: 
+    rails active_storage:install
+
+  Cria as tabelas referente ao active_storage
+    rails db:migrate
+
+  Obs: Tabelas que serão criadas:
+    active_storage_blobs 
+    active_storage_attachments
+    active_storage_variant_records
+
+  Abrir o arquivo config/environments/development.rb e add a linha
+    Rails.application.routes.default_url_options[:host] = 'localhost:3000'
+
+  Nos models que for ter os campos de images add:
+    has_one_attached :image
+
+Seeds e Dados Fakes
+  1 - Criar dentro de public/ as pastas de imagens/categories, products e restaurants
+  2 - Depois de criar essas pastas add as imagens
+  3 - Depois add no arquivos db/seed.rb toda a configuração de cadastro das entidades
+  4 - No terminal executar:
+    rails db:seed
+  
+  Obs: Se ocorrer erros no SQLite rode os blocos do arquivos seed em etapa.
+  No terminal acesso o rails c e execute os scripts em bloco:
+  rails c
+
+  Para ver os dados:
+    Category.all.count
+
+Preparando os Controllers
+  no arquivo gem habilitar a gem jbuilder
+    gem 'jbuilder'
+
+  No terminal rodar:
+    bundle
+  
+Configurando o CORS
+  Acrescente no seu config/application.rb:    
+    config.middleware.insert_before 0, Rack::Cors do
+        allow do
+          origins '*'
+          resource '*',
+            headers: :any,
+            methods: %i(get post put patch delete options head)
+        end
+      end  
+
+Configurando o Rack Attack
+  Acrescente no seu Gemfile:
+    gem 'rack-attack'
+
+  Rodar no terminal:
+    bundle
+
+Crie um arquivo chamado rack_attack.rb no seu config/initializers/ e coloque nele:
+  class Rack::Attack
+    Rack::Attack.cache.store = ActiveSupport::Cache::MemoryStore.new
+
+    # Allow all local traffic
+    safelist('allow-localhost') do |req|
+      '127.0.0.1' == req.ip || '::1' == req.ip
+    end
+
+    # Allow an IP address to make 10 requests every 10 seconds
+    throttle('req/ip', limit: 5, period: 5) do |req|
+      req.ip
+    end
+
+
+    # Throttle login attempts by email address
+    #throttle("logins/email", limit: 5, period: 20.seconds) do |req|
+    #  if req.path == '/users/sign_in' && req.post?
+    #    req.params['email'].presence
+    #  end
+    #end
+  end
+
+No arquivo config/environments/development.rb coloque:
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+Postman:
+  https://documenter.getpostman.com/view/10378249/TzRPk9yD#11a49f8a-1508-4c8d-a292-14c7687d2e5b
+
+Configurando o Versionamento da api
+  1 – Dentro da pasta api/v1/ crie um arquivo chamado api_controller.rb e coloque nele:

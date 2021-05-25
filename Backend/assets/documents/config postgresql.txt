@@ -1,0 +1,62 @@
+Antes de criar o projeto instale e configure o postgresql no WSL
+https://docs.microsoft.com/pt-br/windows/wsl/tutorials/wsl-database
+
+Abra o terminal do WSL (ou seja, Ubuntu 18.04).
+Atualize os pacotes do Ubuntu: 
+  sudo apt update
+Depois que os pacotes forem atualizados, instale o PostgreSQL (e o pacote -contrib que tem alguns utilitários úteis) com: 
+  sudo apt install postgresql postgresql-contrib
+Confirme a instalação e obtenha o número de versão: 
+  psql --version
+
+Há três comandos que você precisará saber quando o PostgreSQL estiver instalado:
+
+para verificar o status do banco de dados:
+  sudo service postgresql status 
+  
+para iniciar a execução do banco de dados:
+  sudo service postgresql start
+
+para interromper a execução do banco de dados:
+  sudo service postgresql stop
+
+  sudo service postgresql restart
+
+usuário administrador padrão, postgres, precisa de uma senha atribuída para se conectar a um banco de dados.
+Para definir uma senha, Insira o comando: 
+  sudo passwd postgres
+
+Alterar o arquivo pg_hba.conf
+  cd /etc/postgresql/10/main#
+  sudo su
+  nano pg_hba.conf
+
+ALTERAR
+Database administrative login by Unix domain socket
+local      all              postgres                                md5
+
+PARA
+
+Database administrative login by Unix domain socket
+local   all             postgres                                peer
+
+Você deverá inserir sua nova senha.
+Feche e abra novamente o terminal.
+
+Para executar o PostgreSQL com o Shell do psql:
+Inicie o serviço Postgres: 
+  sudo service postgresql start
+
+  sudo service postgresql restart
+
+Conecte-se ao serviço Postgres e abra o shell do psql: 
+  sudo -u postgres psql
+
+Usar o banco de dados
+  \c "OneBitFood_development";
+
+Listar Bancos:
+  \l;
+
+Listar tabelas
+  \dt;
