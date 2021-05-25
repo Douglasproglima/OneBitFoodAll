@@ -4,7 +4,7 @@ Rails.application.routes.draw do
       resources :categories, only: [:index]
       resources :restaurants, only: [:index, :show]
       resources :orders, only: [:create, :show]
-      resources :avaliable_cities, only: [:index]
+      resources :available_cities, only: [:index]
     end
   end
 end
@@ -14,6 +14,6 @@ end
 #    resources :categories, only: [:index]
 #    resources :restaurants, only: [:index, :show]
 #    resources :orders, only: [:create, :show]
-#    resources :avaliable_cities, only: [:index]
+#    resources :available_cities, only: [:index]
 #  end
 #end

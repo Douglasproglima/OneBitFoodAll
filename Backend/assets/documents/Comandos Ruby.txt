@@ -27,7 +27,7 @@ Gerar Controllers
   rails g controller api/v1/Orders create show --skip-routes
 
   # Quais cidades estão disponiveis para o usuário
-  rails g controller api/v1/AvailableCities index --skip-routes
+  rails g controller api/v1/AvaliableCities index --skip-routes
 
 Rotas -> Onde faz mapeamento das URL's para os Controllers
 
