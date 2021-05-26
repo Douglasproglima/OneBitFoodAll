@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center">
-🚀 API OneBitFoodProgLima 🚀
+🚀 OneBitFoodProgLima 🚀
 </h1>
 
 <p align="center">
