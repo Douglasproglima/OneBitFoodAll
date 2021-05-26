@@ -20,12 +20,12 @@
                     "method": "GET",
                     "header": [],
                     "url": {
-                      "raw": "http://localhost:3000/api/available_cities",
+                      "raw": "http://localhost:3001/api/available_cities",
                       "protocol": "http",
                       "host": [
                         "localhost"
                       ],
-                      "port": "3000",
+                      "port": "3001",
                       "path": [
                         "api",
                         "available_cities"
@@ -45,12 +45,12 @@
                     "method": "GET",
                     "header": [],
                     "url": {
-                      "raw": "http://localhost:3000/api/restaurants",
+                      "raw": "http://localhost:3001/api/restaurants",
                       "protocol": "http",
                       "host": [
                         "localhost"
                       ],
-                      "port": "3000",
+                      "port": "3001",
                       "path": [
                         "api",
                         "restaurants"
@@ -77,12 +77,12 @@
                     "method": "GET",
                     "header": [],
                     "url": {
-                      "raw": "http://localhost:3000/api/restaurants/10",
+                      "raw": "http://localhost:3001/api/restaurants/10",
                       "protocol": "http",
                       "host": [
                         "localhost"
                       ],
-                      "port": "3000",
+                      "port": "3001",
                       "path": [
                         "api",
                         "restaurants",
@@ -103,12 +103,12 @@
                     "method": "GET",
                     "header": [],
                     "url": {
-                      "raw": "http://localhost:3000/api/categories",
+                      "raw": "http://localhost:3001/api/categories",
                       "protocol": "http",
                       "host": [
                         "localhost"
                       ],
-                      "port": "3000",
+                      "port": "3001",
                       "path": [
                         "api",
                         "categories"
@@ -137,12 +137,12 @@
                       }
                     },
                     "url": {
-                      "raw": "http://localhost:3000/api/orders",
+                      "raw": "http://localhost:3001/api/orders",
                       "protocol": "http",
                       "host": [
                         "localhost"
                       ],
-                      "port": "3000",
+                      "port": "3001",
                       "path": [
                         "api",
                         "orders"
@@ -157,12 +157,12 @@
                     "method": "GET",
                     "header": [],
                     "url": {
-                      "raw": "http://localhost:3000/api/orders/1",
+                      "raw": "http://localhost:3001/api/orders/1",
                       "protocol": "http",
                       "host": [
                         "localhost"
                       ],
-                      "port": "3000",
+                      "port": "3001",
                       "path": [
                         "api",
                         "orders",

@@ -50,7 +50,7 @@ Trabalhando com imagens
     active_storage_variant_records
 
   Abrir o arquivo config/environments/development.rb e add a linha
-    Rails.application.routes.default_url_options[:host] = 'localhost:3000'
+    Rails.application.routes.default_url_options[:host] = 'localhost:3001'
 
   Nos models que for ter os campos de images add:
     has_one_attached :image
@@ -118,7 +118,7 @@ Crie um arquivo chamado rack_attack.rb no seu config/initializers/ e coloque nel
   end
 
 No arquivo config/environments/development.rb coloque:
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3001 }
 
 Postman:
   https://documenter.getpostman.com/view/10378249/TzRPk9yD#11a49f8a-1508-4c8d-a292-14c7687d2e5b
