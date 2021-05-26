@@ -1,34 +1,181 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+<p align="center">
+  <img alt="Logo DevRise Week" title="#douglasproglima-apps" src="https://rubyonrails.org/images/rails-logo.svg" width="250px" />
+</p>
 
-First, run the development server:
+<h1 align="center">
+🚀 WebApp OneBitFoodProgLima 🚀
+</h1>
+
+<p align="center">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Douglasproglima/OneBitFoodAll">
+
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/Douglasproglima/OneBitFoodAll">
+
+  <a href="https://github.com/Douglasproglima/OneBitFoodAll/commits/main">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Douglasproglima/OneBitFoodAll">
+  </a>
+
+  <a href="https://github.com/Douglasproglima/FindHouses/issues">
+    <img alt="Repository issues" src="https://img.shields.io/github/issues/Douglasproglima/OneBitFoodAll">
+  </a>
+
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
+</p>
+
+<p align="center">
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rocket-executando">Executando</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rocket-executando">Comandos React/Nextjs</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-licença">Licença</a>
+</p>
+<br>
+
+## 💻 Projeto
+
+Esse projeto foi desenvolvido com o objetivo de me atualizar com a nova versão do Rails 6 e Reactjs usando o Nextjs.
+
+Neste projeto, encontra-se uma API feita em Ruby on Rails 6 e a parte Web feita em Nextjs.
+
+## :school_satchel: Aprendizados
+### Frontend
+- Reactjs + Nextjs
+- Chamadas da API com SWR
+- Como usar bootstrap em projeto React
+- SASS
+- Lib React-slick
+
+## 🎨 Layout
+
+Você pode encontrar o layout nesse link do [Figma](https://www.figma.com/file/ixKXvWvJzSr8E8nBNwJ0Ow/DevRiseWeek---FindHouses?node-id=20%3A29)
+
+## :rocket: Tecnologias
+
+Esse projeto foi desenvolvido com as seguintes tecnologias:
+
+- [Reactjs](https://pt-br.reactjs.org/)
+- [Nextjs](https://nextjs.org/)
+- [React-Bootstrap](https://react-bootstrap.github.io/)
+
+\* Para mais detalhes, veja o **[Gemfile](./GemFile)**
+
+## :notebook: Executando
 
 ```bash
-npm run dev
-# or
-yarn dev
+# Clone este repositório
+$ git clone https://github.com/Douglasproglima/OneBitFoodAll.git
+
+# Acesse a pasta do projeto no seu terminal/cmd
+$ cd OneBitFoodAll/frontend
+
+# Instale as dependências:
+# SWR
+$ yarn add swr@0.5.5
+
+# Node SASS
+$ yarn add sass@1.32.12
+
+# Framework CSS bootstrap
+$ yarn add react-bootstrap@1.5.2 bootstrap@5.0.0
+
+# Lib de Ícones
+$ yarn add react-icons@4.2.0
+
+# Instalar all Libs
+$ yarn
+
+# Servidor
+$ yarn start
+# OU
+$ npm start
 ```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## :notebook: Instalando e Configurando PostgreSQL
+---
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```bash
+#Antes de criar o projeto instale e configure o postgresql no WSL
+#https://docs.microsoft.com/pt-br/windows/wsl/tutorials/wsl-database
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+#Abra o terminal do WSL (ou seja, Ubuntu 18.04).
+#Atualize os pacotes do Ubuntu:
+$ sudo apt update
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+#Depois que os pacotes forem atualizados, instale o PostgreSQL (e o pacote -contrib que tem alguns utilitários úteis) com:
+$  sudo apt install postgresql postgresql-contrib
 
-## Learn More
+#Confirme a instalação e obtenha o número de versão:
+$  psql --version
 
-To learn more about Next.js, take a look at the following resources:
+#Há três comandos que você precisará saber quando o PostgreSQL estiver instalado:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#para verificar o status do banco de dados:
+$  sudo service postgresql status
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+para iniciar a execução do banco de dados:
+$  sudo service postgresql start
 
-## Deploy on Vercel
+#Parar/Reiniciar interromper a execução do banco de dados:
+$  sudo service postgresql stop
+$  sudo service postgresql restart
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#Usuário admin padrão, postgres, precisa de uma senha atribuída para se conectar a um banco de dados.
+#Para definir uma senha, Insira o comando:
+$  sudo passwd postgres
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+#Alterar o arquivo pg_hba.conf
+$  cd /etc/postgresql/10/main#
+$  sudo su
+$  nano pg_hba.conf
+
+#ALTERAR
+$ Database administrative login by Unix domain socket
+$ local   all   postgres    md5
+
+#PARA
+
+#Database administrative login by Unix domain socket
+$ local  all   postgres   peer
+
+#Você deverá inserir sua nova senha.
+#Feche e abra novamente o terminal e inicie o serviço do PostgreSQL.
+
+# Conecte-se ao serviço Postgres e abra o shell do psql:
+$  sudo -u postgres psql
+
+# Usar o banco de dados
+$  \c "OneBitFood_development";
+
+#Listar Bancos:
+$  \l;
+
+#Listar tabelas
+$  \dt;
+```
+---
+
+## :notebook: Comandos Rails
+
+```bash
+# Clone este repositório
+$ git clone https://github.com/Douglasproglima/OneBitFoodAll.git
+
+# Criar os BD
+$ rails db:create
+
+# Rodando as Migrations
+$ rails db:migrate
+
+# Rodando os dados Fakes através do arquivo seed
+$ rails db:seed
+
+# Servidor de Aplicação
+$ rails s -p 3001
+
+```
+---
+
+Feito com ❤️ por Douglas Lima <img src="https://raw.githubusercontent.com/Douglasproglima/douglasproglima/master/gifs/Hi.gif" width="30px"></h2> [Entre em contato!](https://www.linkedin.com/in/douglasproglima)
