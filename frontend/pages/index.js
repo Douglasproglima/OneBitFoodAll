@@ -1,7 +1,9 @@
+import Container from 'react-bootstrap/Container';
+
 export default function Home() {
   return (
-    <>
-      <p>Hello World</p>
-    </>
+    <Container>
+      Home Page
+    </Container>
   )
 }
