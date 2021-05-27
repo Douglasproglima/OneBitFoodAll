@@ -7,7 +7,7 @@ const restaurants = [
   {
     'id': 1,
     'name': 'Lorem ipsum dolor sit amet.',
-    'descrition': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, laudantium.',
+    'description': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, laudantium.',
     'delivery_tax': '5',
     'image_url': '/restaurant.jpeg',
     'category_title': 'Cozinha Japonesa'
@@ -15,10 +15,18 @@ const restaurants = [
   {
     'id': 2,
     'name': 'Lorem ipsum dolor sit amet.',
-    'descrition': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, laudantium.',
+    'description': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, laudantium.',
     'delivery_tax': '6',
     'image_url': '/restaurant.jpeg',
     'category_title': 'Cozinha Italiana'
+  },
+  {
+    'id': 3,
+    'name': 'sit amet Lorem ipsum dolor sit amet.',
+    'description': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, laudantium.',
+    'delivery_tax': '10.5',
+    'image_url': '/restaurant.jpeg',
+    'category_title': 'Cozinha Americana'
   }
 ]
 
