@@ -11,7 +11,7 @@ export default function Home() {
           <Typewriter text="Comida saudável e gostosa direto na sua casa" />
         </h1>
 
-        <Link href='/restaurant'>
+        <Link href='/restaurants'>
           <Button variant="custom-red" size="lg" className="text-white">
             <FaCrosshairs className="pb-1" />
             <span className="px-2 fw-bolder">ENCONTRAR AGORA</span>

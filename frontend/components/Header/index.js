@@ -7,7 +7,7 @@ export default function Header() {
     <>
     <Navbar bg='white' expand='lg' className='border-bottom border-custom-gray'>
       <Navbar.Brand className='mx-3'>
-        <Link href='/restaurants'>
+        <Link href='/'>
           <a>
             <Image
               src='/logo.png'
