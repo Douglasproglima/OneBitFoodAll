@@ -1,8 +1,8 @@
 import React from 'react';
 import { Row, Col, Card } from 'react-bootstrap';
 import { FaStar } from 'react-icons/fa';
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from 'next/image';
+import Link from 'next/link';
 import toCurrency from '../../../services/utils/toCurrency';
 import truncateString from '../../../services/utils/truncateString';
 
@@ -14,7 +14,7 @@ const Restaurant = (props) => (
           <Col md={5} xs={12}>
             <Image
               src={props.image_url}
-              alt={props.name}
+              alt={truncateString(props.name, 10)}
               width={300}
               height={200}
               layout="responsive"
