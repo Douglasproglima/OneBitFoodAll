@@ -1,42 +1,25 @@
-
-import React from 'react';
 import { Row, Col, Spinner, Alert } from 'react-bootstrap';
-import Restaurant from '../ListRestaurants/Restaurant';
-
-const restaurants = [
-  {
-    'id': 1,
-    'name': 'Lorem ipsum dolor sit amet.',
-    'description': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, laudantium.',
-    'delivery_tax': '5',
-    'image_url': '/restaurant.jpeg',
-    'category_title': 'Cozinha Japonesa'
-  },
-  {
-    'id': 2,
-    'name': 'Lorem ipsum dolor sit amet.',
-    'description': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, laudantium.',
-    'delivery_tax': '6',
-    'image_url': '/restaurant.jpeg',
-    'category_title': 'Cozinha Italiana'
-  },
-  {
-    'id': 3,
-    'name': 'sit amet Lorem ipsum dolor sit amet.',
-    'description': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, laudantium.',
-    'delivery_tax': '10.5',
-    'image_url': '/restaurant.jpeg',
-    'category_title': 'Cozinha Americana'
-  }
-]
+import Restaurant from './Restaurant';
+import getRestaurants from '../../services/api/getRestaurants';
 
 export default function ListRestaurants() {
-  return (
+  const { restaurants, isLoading, isError } = getRestaurants();
+
+  function renderContent() {
+    if (isError) return <Col><Alert variant="custom-red">Erro ao Carregar</Alert></Col>;
+    else if (isLoading) return <Col><Spinner animation="border" /></Col>;
+    else if (restaurants.lenght == 0)
+      return <Col>Nenhum restaurante disponivel ainda...</Col>;
+    else
+      return restaurants.map((restaurant, i) => (
+        <Restaurant {...restaurant} key={i} />
+      ));
+  }
+
+  return(
     <div className='mt-5'>
       <h3 className='fw-bold'>Restaurantes</h3>
-      <Row>
-        {restaurants.map((restaurant, i) => <Restaurant {...restaurant} key={i}/>)}
-      </Row>
+      <Row> {renderContent()} </Row>
     </div>
   )
 }
