@@ -25,13 +25,13 @@ default: &default
 
 development:
   <<: *default
-  database: Backend_development
+  database: OneBitFood_development
 
 test:
   <<: *default
-  database: Backend_test
+  database: OneBitFood_test
 
 production:
   <<: *default
-  database: Backend_production
+  database: OneBitFood_production
   #password: <%= ENV['BACKEND_DATABASE_PASSWORD'] %>

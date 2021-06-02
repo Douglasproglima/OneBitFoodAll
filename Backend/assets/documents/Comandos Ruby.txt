@@ -12,6 +12,8 @@ Gerar Models
 
   rails g model OrderProduct quantity:integer order:references product:references
 
+  rails g model Review rate:decimal restaurant:references
+
 Rodar o create para criar o banco de dados
   rails db:create
 
@@ -28,6 +30,8 @@ Gerar Controllers
 
   # Quais cidades estão disponiveis para o usuário
   rails g controller api/v1/AvaliableCities index --skip-routes
+
+  rails g controller api/v1/Reviews index --skip-routes
 
 Rotas -> Onde faz mapeamento das URL's para os Controllers
 
