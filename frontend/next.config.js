@@ -3,6 +3,7 @@ module.exports = {
     domains: ["localhost"],
   },
   env: {
-    apiUrl: "http://localhost:3000",
+    apiUrl: "http://localhost:3001",
+    version: "v1",
   },
 };
