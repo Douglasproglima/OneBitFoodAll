@@ -3,12 +3,17 @@ import { useRouter } from 'next/router';
 
 export default function getRestaurants() {
   const router = useRouter();
-  const { category } = router.query; //Pega na URI
+  const { category, q } = router.query; //Pega na URI
 
   let params = '';
   if(category) {
-    const questionPoint = `${params == '' ? '?' : '&'}`;
-    params = questionPoint + `category=${category}`;
+    const questionPointCategory = `${params == '' ? '?' : '&'}`;
+    params = questionPointCategory + `category=${category}`;
+  }
+
+  if(q) {
+    const questionPointQuery = `${params == '' ? '?' : '&'}`;
+    params = questionPointQuery + `q=${q}`;
   }
 
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
