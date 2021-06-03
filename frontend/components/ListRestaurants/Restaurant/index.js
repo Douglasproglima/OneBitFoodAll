@@ -29,7 +29,7 @@ const Restaurant = (props) => (
               <small className='fw-bold'>{props.category_title}</small>
             </p>
             <small className='border px-3 border-custom-gray fw-bold'>
-              entrega {toCurrency(props.delivery_tax)}
+              Entrega {toCurrency(props.delivery_tax)}
             </small>
           </Col>
           <Col md={2} xs={2} className="text-center">
