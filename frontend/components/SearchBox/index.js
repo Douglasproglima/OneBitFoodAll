@@ -16,15 +16,15 @@ export default function SearchBox() {
   return (
     <Form className='d-flex mx-5 my-2' onSubmit={e => Search(e)}>
       <Form.Control
-        type='text'
-        placeholder='Buscar Restaurantes'
-        className='me-2'
-        value={q}
-        onChange={e => setQuery(e.target.value)}
+          type='text'
+          placeholder='Buscar Restaurantes'
+          className='me-2'
+          value={q}
+          onChange={e => setQuery(e.target.value)}
       />
       <Button variant='outline-custom-red' type='submit'>
         <FaSearch />
-      </Button>
+      </Button>   
     </Form>
   )
 }
