@@ -1,5 +1,5 @@
 json.id restaurant.id
-json.name restaurant.name
+json.name restaurant.name.capitalize
 json.description restaurant.description
 json.delivery_tax restaurant.delivery_tax
 json.city restaurant.city

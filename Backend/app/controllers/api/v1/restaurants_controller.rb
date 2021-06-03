@@ -3,7 +3,7 @@ class Api::V1::RestaurantsController < Api::V1::ApiController
   
   def index
     @restaurants = Restaurant.all
-    filter_by_query if params[:query]
+    filter_by_query if params[:q]
     filter_by_city if params[:city]
     filter_by_category if(params[:category])
   end
@@ -19,7 +19,7 @@ class Api::V1::RestaurantsController < Api::V1::ApiController
 
   # gem ransack: Auxilia na pesquisa de textos
   def filter_by_query
-    @restaurants = @restaurants.ransack(name_or_description_cont: params[:query]).result
+    @restaurants = @restaurants.ransack(name_or_description_cont: params[:q]).result
   end
 
   def filter_by_city
