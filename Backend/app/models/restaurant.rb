@@ -12,7 +12,7 @@ class Restaurant < ApplicationRecord
 
   def average_review
     sum = self.reviews.to_a.sum(&:rate)
-    sum = sum / self.review.count
+    sum = sum / self.reviews.count
     '%.1f' % sum
   end
 end

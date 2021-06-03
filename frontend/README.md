@@ -71,17 +71,23 @@ $ git clone https://github.com/Douglasproglima/OneBitFoodAll.git
 $ cd OneBitFoodAll/frontend
 
 # Instale as dependências:
-# SWR
+# React Hock para fetch data
+# https://swr.vercel.app/
 $ yarn add swr@0.5.5
 
 # Node SASS
 $ yarn add sass@1.32.12
 
 # Framework CSS bootstrap
+# https://react-bootstrap.github.io/components/alerts/
 $ yarn add react-bootstrap@1.5.2 bootstrap@5.0.0
 
 # Lib de Ícones
 $ yarn add react-icons@4.2.0
+
+# Lib para gerar o efeito carrosel
+# https://react-slick.neostack.com/
+$ yarn add slick-carousel@1.8.1 react-slick@0.28.1
 
 # Instalar all Libs
 $ yarn
