@@ -46,6 +46,7 @@ Neste projeto, encontra-se uma API feita em Ruby on Rails 6 e a parte Web feita 
 - Como usar bootstrap em projeto React
 - SASS
 - Lib React-slick
+- Recoil (Gerenciador de estado do React)
 
 ## 🎨 Layout
 
@@ -88,6 +89,12 @@ $ yarn add react-icons@4.2.0
 # Lib para gerar o efeito carrosel
 # https://react-slick.neostack.com/
 $ yarn add slick-carousel@1.8.1 react-slick@0.28.1
+
+# Recoil: Gerenciador de estado do ReactJs
+# Dois principais pilares: Atoms e Selectors
+# -> Atoms: Arquivos onde tem o estado global, onde vários componentes tem acesso a esse estado, é possível atualizar e ler estes estados
+# -> Selectors: Funções puras cujo o objetivo é devolver os valores derivados dos atoms.
+$ yarn add recoil@0.3.1 recoil-persist@2.9.0
 
 # Instalar all Libs
 $ yarn
