@@ -44,6 +44,7 @@ Neste projeto, encontrasse uma API feita em Ruby on Rails 6 e a parte Web feita 
 - Atualização das features do Rails 6
 - O uso da Gem jbuilder e como criar Partials
 - Versionsamento de API no Rails 6
+- Uso da Gem FriendlyId
 
 ## 🎨 Layout
 

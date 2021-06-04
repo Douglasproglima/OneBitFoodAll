@@ -129,3 +129,20 @@ Postman:
 
 Configurando o Versionamento da api
   1 – Dentro da pasta api/v1/ crie um arquivo chamado api_controller.rb e coloque nele:
+
+FriendlyId:
+  Add a gem no GemFile:
+    gem 'friendly_id', '~> 5.4.0'
+
+  Rode bundle:
+    bundle
+
+  Rode o comando para a criar a migration de relacionamento entre o FriendlyId e Restaurants
+    rails g migration AddSlugToRestaurants slug:uniq
+  
+  Gere o arquivo de config do FriendlyId, que ficara na pasta config/initializers:
+    rails generate friendly_id
+
+  Gera as tabelas no BD:
+    rails db:migrate
+  

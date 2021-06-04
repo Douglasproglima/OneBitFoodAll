@@ -2,7 +2,7 @@ class Api::V1::RestaurantsController < Api::V1::ApiController
   before_action :set_restaurant, only: :show
   
   def index
-    @restaurants = Restaurant.all
+    @restaurants = Restaurant.friendly.all
     filter_by_query if params[:q]
     filter_by_city if params[:city]
     filter_by_category if(params[:category])
@@ -14,7 +14,7 @@ class Api::V1::RestaurantsController < Api::V1::ApiController
   private
 
   def set_restaurant
-    @restaurant = Restaurant.find(params[:id])
+    @restaurant = Restaurant.friendly.find(params[:id])
   end
 
   # gem ransack: Auxilia na pesquisa de textos
