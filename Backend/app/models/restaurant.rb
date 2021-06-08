@@ -1,4 +1,6 @@
-class Restaurant < ApplicationRecord extend FriendlyId
+class Restaurant < ApplicationRecord 
+  extend FriendlyId
+  
   friendly_id :name, use: :slugged
   belongs_to :category
 

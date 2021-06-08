@@ -3,6 +3,8 @@ class Api::V1::RestaurantsController < Api::V1::ApiController
   
   def index
     @restaurants = Restaurant.friendly.all
+    #@restaurants = Restaurant.all
+    
     filter_by_query if params[:q]
     filter_by_city if params[:city]
     filter_by_category if(params[:category])
