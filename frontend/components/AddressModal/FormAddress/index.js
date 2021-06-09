@@ -28,7 +28,8 @@ export default function FormAddress(props) {
     e.preventDefault();
     props.onHide();
 
-    if (cityChanged)  router.push('/restaurants');
+    if (cityChanged)
+      router.push('/restaurants');
   }
 
   return (
@@ -38,7 +39,7 @@ export default function FormAddress(props) {
           <Form.Group>
             <Form.Label>Sua Cidade</Form.Label>
             <Form.Control
-              required
+              required={false}
               as="select"
               onChange={updateAddress}
               value={address.city}
@@ -54,7 +55,7 @@ export default function FormAddress(props) {
               <Form.Group className='mt-3'>
                 <Form.Label>Bairro</Form.Label>
                 <Form.Control
-                  required
+                  required={false}
                   type="text"
                   placeholder="Bairro"
                   onChange={updateAddress}
@@ -66,7 +67,7 @@ export default function FormAddress(props) {
               <Form.Group className='mt-3'>
                 <Form.Label>Logradouro</Form.Label>
                 <Form.Control
-                  required
+                  required={false}
                   type="text"
                   placeholder="Rua/Avenida/Alameda"
                   onChange={updateAddress}
@@ -76,9 +77,9 @@ export default function FormAddress(props) {
               </Form.Group>
 
               <Form.Group className='mt-3'>
-                <Form.Label>Nûmero</Form.Label>
+                <Form.Label>Número</Form.Label>
                 <Form.Control
-                  required
+                  required={false}
                   type="text"
                   placeholder="Número"
                   onChange={updateAddress}
@@ -101,7 +102,7 @@ export default function FormAddress(props) {
               <div className="text-center pt-4">
                 <Button variant="custom-red" className='text-white' type="submit" size="md">
                   Confirmar Endereço
-              </Button>
+                </Button>
               </div>
             </div>
           }

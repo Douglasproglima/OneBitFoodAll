@@ -6,11 +6,11 @@ import { useRecoilState } from 'recoil';
 import addressState from '../../store/atoms/addressAtom';
 import { useRouter } from 'next/router';
 
-
 export default function AddressModal(props) {
-  const [address, setAddress] = useRecoilState(addressState);
+  const [address] = useRecoilState(addressState);
   const router = useRouter();
 
+  //Se for na home não mostra o modal obrigatoriamente nas demais pages mostra o modal em primeiro plano
   useEffect(() => {
     if (router.asPath != '/' && address.city == '') {
       props.onShow();
@@ -35,6 +35,9 @@ export default function AddressModal(props) {
             onShow={() => props.onShow()}
           />
         </Modal.Body>
+        <Modal.Footer>
+          teste
+        </Modal.Footer>
     </Modal>
   )
 }
