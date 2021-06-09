@@ -27,6 +27,9 @@ path_image = 'public/images/categories/peruvian.jpg'
 c = Category.create(id: 5, title: 'peruana')
 c.image.attach(io: File.open(path_image), filename: 'peruana.jpg')
 
+path_image = 'public/images/categories/hamburguer.jpeg'
+c = Category.create(id: 6, title: 'hamburguer')
+c.image.attach(io: File.open(path_image), filename: 'hamburguer.jpeg')
 
 puts 'Cadastrando Restaurantes'
 
@@ -285,3 +288,62 @@ prod = Product.create!(name: 'Salada de quinoa', price: 20.90, description: 'Alf
 prod.image.attach(io: File.open('public/images/products/salada-de-quinoa.jpg'), filename: 'salada-de-quinoa.jpg')
 prod = Product.create!(name: 'Coleslaw', price: 11, description: 'Repolho roxo, couve, cenoura, cebola, maionese de castanha e xylitol',  product_category: pc)
 prod.image.attach(io: File.open('public/images/products/coleslaw2.jpeg'), filename: 'coleslaw2.jpeg')
+
+# Vegan Restaurants
+path_image = 'public/images/restaurants/7.jpeg'
+r = Restaurant.create!(
+  name: 'Porcão - BH',
+  description: 'NOSSA ESPECIALIDADE. pratos vegetais de alta qualidade,com opções de alimentos integrais, sem glúten e sem lactose.',
+  delivery_tax: 5.70,
+  city: 'Belo Horizonte', street: 'Avenida Amazonas',
+  number: '1032', neighborhood: 'Centro', category_id: 4
+)
+r.image.attach(io: File.open(path_image), filename: '7.jpg')
+pc = ProductCategory.create!(title: 'Saladas, molhos e wraps', restaurant: r)
+review = Review.create!(rate: '3.2', restaurant: r)
+review = Review.create!(rate: '2.8', restaurant: r)
+review = Review.create!(rate: '4.9', restaurant: r)
+review = Review.create!(rate: '4.1', restaurant: r)
+prod = Product.create!(name: 'Coleslaw', price: 8.99, description: 'Repolho roxo, couve, cenoura, cebola, maionese de castanha e xylitol',  product_category: pc)
+prod.image.attach(io: File.open('public/images/products/coleslaw.jpg'), filename: 'coleslaw.jpg')
+prod = Product.create!(name: 'Side salad', price: 9.90, description: 'Mix de folhas com cenoura ralada, tomatinho sweet e semente de girassol.',  product_category: pc)
+prod.image.attach(io: File.open('public/images/products/side-salad.jpeg'), filename: 'side-salad.jpeg')
+
+path_image = 'public/images/restaurants/8.jpeg'
+r = Restaurant.create!(
+  name: 'Porcão - Itaúna',
+  description: 'Oferecemos, desde 1981, refeições ovo-lacto-vegetarianas, leves, saudáveis, balanceadas e principalmente saborosas, procurando aliar o sabor, a qualidade de vida e o bem-estar dos clientes.',
+  delivery_tax: 8.30,
+  city: 'Itaúna', street: 'Rua Silva Jardim',
+  number: '24', neighborhood: 'Centro', category_id: 4
+)
+r.image.attach(io: File.open(path_image), filename: '8.jpg')
+pc = ProductCategory.create!(title: 'Saladas, molhos e wraps', restaurant: r)
+review = Review.create!(rate: '4.0', restaurant: r)
+review = Review.create!(rate: '4.1', restaurant: r)
+review = Review.create!(rate: '3.5', restaurant: r)
+review = Review.create!(rate: '4.2', restaurant: r)
+prod = Product.create!(name: 'Salada de quinoa', price: 20.90, description: 'Alface americana, roxa, frisee, quinoa cozida, cenoura, tomate, damasco dessecado, amendoa crua.',  product_category: pc)
+prod.image.attach(io: File.open('public/images/products/salada-de-quinoa.jpg'), filename: 'salada-de-quinoa.jpg')
+prod = Product.create!(name: 'Coleslaw', price: 11, description: 'Repolho roxo, couve, cenoura, cebola, maionese de castanha e xylitol',  product_category: pc)
+prod.image.attach(io: File.open('public/images/products/coleslaw2.jpeg'), filename: 'coleslaw2.jpeg')
+
+# Italian Restaurants
+path_image = 'public/images/restaurants/8.jpeg'
+r = Restaurant.create!(
+  name: 'Usina Hamburgueria',
+  description: 'Estamos empenhados em usar os melhores ingredientes em nossas receitas. Nenhum alimento deixa a nossa cozinha que nós mesmos não comeríamos.',
+  delivery_tax: 3.50,
+  city: 'Itaúna', street: 'Avenida Jove Soares',
+  number: '352', neighborhood: 'Centro', category_id: 6
+)
+r.image.attach(io: File.open(path_image), filename: '8.jpg')
+pc = ProductCategory.create!(title: 'Hamburguer Artesanal', restaurant: r)
+review = Review.create!(rate: '4.0', restaurant: r)
+review = Review.create!(rate: '4.5', restaurant: r)
+review = Review.create!(rate: '3.4', restaurant: r)
+review = Review.create!(rate: '4.6', restaurant: r)
+prod = Product.create!(name: 'Hamburguer Choripan', price: 78, description: 'Carne de porco, ovos, queijo cheddar',  product_category: pc)
+prod.image.attach(io: File.open('public/images/products/choripan.jpeg'), filename: 'choripan.jpeg')
+prod = Product.create!(name: 'Fritas + Bacon', price: 35, description: 'Batata frita com bacon',  product_category: pc)
+prod.image.attach(io: File.open('public/images/products/fritas-bacon.jpg'), filename: 'fritas-bacon.jpg')
