@@ -22,10 +22,24 @@ export default function AddProductModal(props) {
     //Objeto produto selecionado e injeta uma nova propriedade quantity com o valor escolhido pelo user
     const product = { ...props.product, ...{ 'quantity': qtde } }
 
-    if (cart.restaurant.id != props.restaurant.id)
-      setCart({ restaurant: props.restaurant, products: [product] });
-    else
-      setCart({ restaurant: props.restaurant, products: { ...cart.products, product } });
+    if (cart.restaurant.id != props.restaurant.id) {
+      const product = { ...props.product, ...{ 'quantity': qtde } }
+      setCart({ restaurant: props.restaurant, products: [product] })
+    } else {
+      if (cart.products.find(item => item.id == props.product.id) != undefined) {
+        let dish = cart.products.find(item => item.id == props.product.id)
+        let i = cart.products.indexOf(dish)
+        let quantityBefore = cart.products[i].quantity
+        let finalQuantity = Number(quantityBefore) + Number(qtde)
+        const product = { ...props.product, ...{ 'quantity': finalQuantity } }
+        let array = [...cart.products]
+        array.splice(i, 1)
+        setCart({ restaurant: props.restaurant, products: [...array, product] })
+      } else {
+        const product = { ...props.product, ...{ 'quantity': qtde } }
+        setCart({ restaurant: props.restaurant, products: [...cart.products, product] })
+      }
+    }
 
     setQtde(1);
     props.onHide();
@@ -85,9 +99,8 @@ export default function AddProductModal(props) {
               onChange={(e) => setQtde(e.target.value)}
             />
           </Form.Group>
-          <Button variant="custom-red"
-            type="submit"
-            className="text-white ms-6">
+
+          <Button variant="custom-red" type="submit" className="text-white ms-6">
             Adicionar
           </Button>
         </Form>

@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 import Modal from 'react-bootstrap/Modal';
-import FormAddress from './FormAddress';
 import { useRecoilState } from 'recoil';
-import addressState from '../../store/atoms/addressAtom';
 import { useRouter } from 'next/router';
+import FormAddress from './FormAddress';
+import addressState from '../../store/atoms/addressAtom';
 
 export default function AddressModal(props) {
   const [address] = useRecoilState(addressState);

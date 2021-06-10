@@ -9,7 +9,7 @@ export default function ListRestaurants() {
     if (isError) return <Col><Alert variant="custom-red">Erro ao Carregar</Alert></Col>;
     else if (isLoading) return <Col><Spinner animation="border" /></Col>;
     else if (restaurants.lenght == 0)
-      return <Col>Nenhum restaurante disponivel ainda...</Col>;
+      return <Col>Nenhum restaurante disponível ainda...</Col>;
     else
       return restaurants.map((restaurant, i) => (
         <Restaurant {...restaurant} key={i} />
