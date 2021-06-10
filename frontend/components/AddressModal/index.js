@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import FormAddress from './FormAddress';
@@ -35,9 +34,6 @@ export default function AddressModal(props) {
             onShow={() => props.onShow()}
           />
         </Modal.Body>
-        <Modal.Footer>
-          teste
-        </Modal.Footer>
     </Modal>
   )
 }
