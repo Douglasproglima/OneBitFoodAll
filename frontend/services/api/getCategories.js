@@ -4,7 +4,7 @@ export default function getCategories() {
   const fetcher = (...args) => fetch(...args).then(res => res.json());
 
   const { data, error } =useSWR(
-    `${process.env.apiUrl}/api/${process.env.version}/categories`,
+    `${process.env.apiUrl}/categories`,
     fetcher,
     { revalidateOnFocus: false }
   )

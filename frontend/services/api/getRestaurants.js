@@ -9,25 +9,19 @@ export default function getRestaurants() {
   const [address] = useRecoilState(addressState);
 
   let params = '';
-  if(category) {
-    const questionPointCategory = `${params == '' ? '?' : '&'}`;
-    params = questionPointCategory + `category=${category}`;
-  }
-
-  if(q) {
-    const questionPointQuery = `${params == '' ? '?' : '&'}`;
-    params = questionPointQuery + `q=${q}`;
-  }
-
-  if (address.city != '') {
-    const questionPointCity = `${params == '' ? '?' : '&'}`;
-    params = questionPointCity + `city=${address.city}`
-  }
+  if (address.city != '') 
+    params += `${params == '' ? '?' : '&'}city=${address.city}`
+  
+  if (q) 
+    params += `${params == '' ? '?' : '&'}q=${q}`
+  
+  if (category) 
+    params += `${params == '' ? '?' : '&'}category=${category}`
 
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
   const { data, error } = useSWR(
-    `${process.env.apiUrl}/api/${process.env.version}/restaurants${params}`,
+    `${process.env.apiUrl}/restaurants${params}`,
     fetcher,
     { revalidateOnFocus: false }
   )
