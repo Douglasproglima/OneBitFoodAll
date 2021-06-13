@@ -103,7 +103,7 @@ OU
 
 ![Finalizar Pedido](./frontend/assets/images/mobile/07-mobile.png)
 
-![Página 404](./frontend/assets/images/moible/08-moible.png)
+![Página 404](./frontend/assets/images/mobile/08-moible.png)
 
 
 ## :notebook: Backend
