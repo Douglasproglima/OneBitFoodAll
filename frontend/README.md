@@ -62,11 +62,39 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ### Web
 
-![Home](./frontend/assets/images/web/01.png)
+![Home](./assets/images/web/01.png)
+
+![Modal Endereço](./assets/images/web/02.png)
+
+![Categoria e Restaurantes](./assets/images/web/03.png)
+
+![Detalhes do Restaurante](./assets/images/web/04.png)
+
+![Add Produto](./assets/images/web/05.png)
+
+![Carrinho](./assets/images/web/06.png)
+
+![Finalizar Pedido](./assets/images/web/07.png)
+
+![Página 404](./assets/images/web/08.png)
 
 ### Mobile
 
-![Home](./frontend/assets/images/mobile/01-mobile.png)
+![Home](./assets/images/mobile/01-mobile.png)
+
+![Modal Endereço](./assets/images/mobile/02-mobile.png)
+
+![Categoria e Restaurantes](./assets/images/mobile/03-mobile.png)
+
+![Detalhes do Restaurante](./assets/images/mobile/04-mobile.png)
+
+![Add Produto](./assets/images/mobile/05-mobile.png)
+
+![Carrinho](./assets/images/mobile/06-mobile.png)
+
+![Finalizar Pedido](./assets/images/mobile/07-mobile.png)
+
+![Página 404](./assets/images/moible/08-moible.png)
 
 ## :notebook: Cmd React/Nextjs
 
