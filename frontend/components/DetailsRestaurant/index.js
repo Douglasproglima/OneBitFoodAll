@@ -1,25 +1,26 @@
-import {useRouter} from 'next/router';
+//import {useRouter} from 'next/router';
 import {Alert, Spinner} from 'react-bootstrap';
 import Details from './Details';
 import CategoryProducts from './CategoryProducts';
-import getRestaurant from '../../services/api/getRestaurant';
+//import getRestaurant from '../../services/api/getRestaurant';
 
-export default function DetailsRestaurant() {
-  const router = useRouter();
-  const { id } = router.query;
-  const { restaurant, isLoading, isError } = getRestaurant(id);
+//export default function DetailsRestaurant() {
+export default function DetailsRestaurant(props) {
+  //const router = useRouter();
+  //const { id } = router.query;
+  //const { restaurant, isLoading, isError } = getRestaurant(id); 
 
-  if(isError)
+  if(props.isError)
       return <Alert variant='custom-red'>Erro ao Carregar</Alert>
-  else if(isLoading)
-      return <Spinner animation='border'/>
-
+  //else if(isLoading)
+  //    return <Spinner animation='border'/>
+  
   return (
     <>
-      <Details { ...restaurant } />
+      <Details { ...props.restaurant } />
       {
-        restaurant.product_categories.map((product_category, i) => 
-          <CategoryProducts restaurant={restaurant} {...product_category} key={i}/>
+        props.restaurant.product_categories.map((product_category, i) => 
+          <CategoryProducts restaurant={props.restaurant} {...product_category} key={i}/>
         )
       }
     </>
