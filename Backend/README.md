@@ -23,12 +23,13 @@
 </p>
 
 <p align="center">
-  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rocket-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rocket-endpoints">Endpoints</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rocket-aprendizado">Aprendizado</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#rocket-executando">Executando</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#rocket-executando">Instalando e Configurando PostgreSQL</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#rocket-executando">Comandos Rails</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rocket-instalando-e-configurando-postgresql">Instalando e Configurando PostgreSQL</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rocket-comandos-rails">Comandos Rails</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-licença">Licença</a>
 </p>
 <br>
@@ -39,16 +40,19 @@ Esse projeto foi desenvolvido com o objetivo de me atualizar com a nova versão 
 
 Neste projeto, encontrasse uma API feita em Ruby on Rails 6 e a parte Web feita em Nextjs.
 
+
+## 👾 Endpoints
+
+Todos os endpoints da API podem ser conferidos na documentação gerada pelo 
+![Postman](https://documenter.getpostman.com/view/2433434/TzeTKpyN)
+https://documenter.getpostman.com/view/2433434/TzeTKpyN
+
 ## :school_satchel: Aprendizados
 ### Backend
 - Atualização das features do Rails 6
 - O uso da Gem jbuilder e como criar Partials
 - Versionsamento de API no Rails 6
 - Uso da Gem FriendlyId
-
-## 🎨 Layout
-
-Você pode encontrar o layout nesse link do [Figma](https://www.figma.com/file/ixKXvWvJzSr8E8nBNwJ0Ow/DevRiseWeek---FindHouses?node-id=20%3A29)
 
 ## :rocket: Tecnologias
 
