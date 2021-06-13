@@ -94,7 +94,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ![Finalizar Pedido](./assets/images/mobile/07-mobile.png)
 
-![Página 404](./assets/images/moible/08-moible.png)
+![Página 404](./assets/images/mobile/08-moible.png)
 
 ## :notebook: Cmd React/Nextjs
 
