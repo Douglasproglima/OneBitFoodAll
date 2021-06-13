@@ -77,32 +77,32 @@ export default function Cart(props) {
       <hr />
 
       <Row className="mt-4">
-        <Col md={8} xs={8}>
+        <Col md={7} xs={7}>
           <p>Subototal</p>
         </Col>
-        
-        <Col md={4} xs={4} className="text-right">
+
+        <Col md={5} xs={5} className="text-right">
           <p>{toCurrency(subTotal())}</p>
         </Col>
       </Row>
 
       <Row className="mt-n2">
-        <Col md={8} xs={8}>
+        <Col md={7} xs={7}>
           <p>Taxa de entrega</p>
         </Col>
 
-        <Col md={4} xs={4} className="text-right">
+        <Col md={5} xs={5} className="text-right">
           <p>{toCurrency(cart.restaurant.delivery_tax)}</p>
         </Col>
         <hr />
       </Row>
 
       <Row className="mb-4">
-        <Col md={8} xs={8}>
+        <Col md={7} xs={7}>
           <p className='fw-bolder'>Total</p>
         </Col>
-        
-        <Col md={4} xs={4} className="text-right">
+
+        <Col md={5} xs={5} className="text-right">
           <p className='fw-bolder'>{toCurrency(total())}</p>
         </Col>
       </Row>
