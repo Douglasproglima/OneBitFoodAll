@@ -5,8 +5,6 @@ import getRestaurants from '../../services/api/getRestaurants';
 export default function ListRestaurants() {
   const { restaurants, isLoading, isError } = getRestaurants();
 
-  //console.log(restaurants.length);
-
   function renderContent() {
     if (isError)
       return <Col><Alert variant="custom-red">Erro ao Carregar</Alert></Col>;

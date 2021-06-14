@@ -31,8 +31,6 @@ export default function OrderForm() {
     restaurant_id: cart.restaurant_id
   });
 
-  console.log(address);
-
   const getAddress = () => {
     const street = address.street.length > 0 ? address.street+', ' : '';
     const number = address.number.length > 0 ? address.number+', ' : '';
