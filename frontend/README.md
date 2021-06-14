@@ -138,7 +138,6 @@ $ yarn start
 # OU
 $ npm start
 ```
-
 ---
 
 Feito com ❤️ por Douglas Lima <img src="https://raw.githubusercontent.com/Douglasproglima/douglasproglima/master/gifs/Hi.gif" width="30px"></h2> [Entre em contato!](https://www.linkedin.com/in/douglasproglima) </h2>Créditos finais: [Onebitcode!](https://www.onebitcode.comhttps://onebitcode.com/)
