@@ -67,6 +67,8 @@ OU
 - Lib react-slick
 
 ## 🎨 Layout
+### Diagrama do DB
+![Database Diagram](./frontend/assets/images/diagram-db.png)
 
 ### Web
 
