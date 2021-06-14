@@ -7,7 +7,6 @@ import toCurrency from '../../../services/utils/toCurrency';
 import truncateString from '../../../services/utils/truncateString';
 
 const Restaurant = (props) => (
-  console.log(props),
   <Col lg={6} sm={6} xs={12} className="mb-4">
     <Link href={`restaurants/${props.slug}`}>
       <Card body className='clickable_effect'>

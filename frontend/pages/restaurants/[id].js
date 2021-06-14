@@ -6,9 +6,11 @@ import DetailsRestaurant from '../../components/DetailsRestaurant';
 //SSG -> Static Server Generate
 // Gera a página do lado do servidor e entrega ela pronta, mesmo processo feito antigamente
 // Para definir uma page como SSG basta usar os métodos getStaticPaths() e getStaticProps(params)
+/*
 export default function Restaurant({ restaurant }) {
   return <DetailsRestaurant restaurant={restaurant} />
 }
+
 
 //Retorna todos os Id's dos restaurantes
 export async function getStaticPaths({ params }) {
@@ -31,6 +33,7 @@ export async function getStaticProps({ params }) {
     revalidate: 120 //Quantidade de tempo que será realizado a chamada da page no server
   }
 }
+*/
 
 /* Chamada Normal
 export default function Restaurant() {
@@ -40,7 +43,6 @@ export default function Restaurant() {
 
 //SSR -> Reinderiza a page do lado do servidor
 // No nextJs basta add o método getServerSideProps() na page ao qual deseja usar o SSR e retornar as props
-/*
 export default function Restaurant({ restaurant, isError = false }) {
   return <DetailsRestaurant restaurant={restaurant} isError={isError} />
 }
@@ -58,4 +60,3 @@ export async function getServerSideProps(context) {
     return { props: { isError: isError}}
   }
 }
-*/
