@@ -40,6 +40,8 @@ Esse projeto foi desenvolvido com o objetivo de me atualizar com a nova versão 
 
 Neste projeto, encontrasse uma API feita em Ruby on Rails 6 e a parte Web feita em Nextjs.
 
+https://onebitfood-web.vercel.app/
+
 ## :rocket: Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
