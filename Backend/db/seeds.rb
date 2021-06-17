@@ -5,36 +5,37 @@ Restaurant.destroy_all
 Category.destroy_all
 Review.destroy_all
 
+pathMain = 'public/assets/images'
 puts 'Criando Categorias'
 
-path_image = 'public/images/categories/mexican.jpg'
+path_image = pathMain + '/categories/mexican.jpg'
 c = Category.create(id: 1, title: 'mexicana')
 c.image.attach(io: File.open(path_image), filename: 'mexican.jpg')
 
-path_image = 'public/images/categories/italian.jpeg'
+path_image = pathMain + '/categories/italian.jpeg'
 c = Category.create(id: 2, title: 'italiana')
 c.image.attach(io: File.open(path_image), filename: 'italian.jpeg')
 
-path_image = 'public/images/categories/japonese.jpeg'
+path_image = pathMain + '/categories/japonese.jpeg'
 c = Category.create(id: 3, title: 'japonesa')
 c.image.attach(io: File.open(path_image), filename: 'japonese.jpeg')
 
-path_image = 'public/images/categories/vegan.jpeg'
+path_image = pathMain + '/categories/vegan.jpeg'
 c = Category.create(id: 4, title: 'vegana')
 c.image.attach(io: File.open(path_image), filename: 'vegan.jpeg')
 
-path_image = 'public/images/categories/peruvian.jpg'
+path_image = pathMain + '/categories/peruvian.jpg'
 c = Category.create(id: 5, title: 'peruana')
 c.image.attach(io: File.open(path_image), filename: 'peruana.jpg')
 
-path_image = 'public/images/categories/hamburguer.jpeg'
+path_image = pathMain + '/categories/hamburguer.jpeg'
 c = Category.create(id: 6, title: 'hamburguer')
 c.image.attach(io: File.open(path_image), filename: 'hamburguer.jpeg')
 
 puts 'Cadastrando Restaurantes'
 
 # Mexican Restaurants
-path_image = 'public/images/restaurants/1.jpeg'
+path_image = pathMain + '/restaurants/1.jpeg'
 r = Restaurant.create!(
   name: 'Los Sombreros',
   description: 'Nossa missão tem sido ajudar as pessoas a alcançar seus objetivos de saúde e bem-estar. Embora tenhamos mudado ao longo dos anos, nossos valores permaneceram os mesmos.',
@@ -49,12 +50,12 @@ review = Review.create!(rate: '4.2', restaurant: r)
 review = Review.create!(rate: '5.0', restaurant: r)
 review = Review.create!(rate: '1.9', restaurant: r)
 prod = Product.create!(name: 'Nacho Guacamole', price: 19, description: 'Tortilhas com Guacamole',  product_category: pc)
-prod.image.attach(io: File.open('public/images/products/nachosg.jpg'), filename: 'nachosg.jpg')
+prod.image.attach(io: File.open(pathMain + '/products/nachosg.jpg'), filename: 'nachosg.jpg')
 prod = Product.create!(name: 'Nacho', price: 19, description: 'Tortilhas com milho', product_category: pc)
-prod.image.attach(io: File.open('public/images/products/nachosg2.jpeg'), filename: 'nachosg2.jpeg')
+prod.image.attach(io: File.open(pathMain + '/products/nachosg2.jpeg'), filename: 'nachosg2.jpeg')
 
 # Curitiba
-path_image = 'public/images/restaurants/1.jpeg'
+path_image = pathMain + '/restaurants/1.jpeg'
 r = Restaurant.create!(
   name: 'Los Sombreros - CWB',
   description: 'Nossa missão tem sido ajudar as pessoas a alcançar seus objetivos de saúde e bem-estar. Embora tenhamos mudado ao longo dos anos, nossos valores permaneceram os mesmos.',
@@ -69,11 +70,11 @@ review = Review.create!(rate: '3.2', restaurant: r)
 review = Review.create!(rate: '2.3', restaurant: r)
 review = Review.create!(rate: '1.4', restaurant: r)
 prod = Product.create!(name: 'Nacho Guacamole', price: 19, description: 'Tortilhas com Guacamole',  product_category: pc)
-prod.image.attach(io: File.open('public/images/products/nachosg.jpg'), filename: 'nachosg.jpg')
+prod.image.attach(io: File.open(pathMain + '/products/nachosg.jpg'), filename: 'nachosg.jpg')
 prod = Product.create!(name: 'Nacho', price: 19, description: 'Tortilhas com milho', product_category: pc)
-prod.image.attach(io: File.open('public/images/products/nachosg2.jpeg'), filename: 'nachosg2.jpeg')
+prod.image.attach(io: File.open(pathMain + '/products/nachosg2.jpeg'), filename: 'nachosg2.jpeg')
 
-path_image = 'public/images/restaurants/2.jpeg'
+path_image = pathMain + '/restaurants/2.jpeg'
 r = Restaurant.create!(
   name: 'Ola Que Tal',
   description: 'Para alcançar e manter essa distinção em comida e vinho, serviço, ambiente e ambiente, o restaurante ganha reputação de primeira classe por gastronomia, hospitalidade graciosa e informada, conforto e beleza que atraem clientes novos e repetidos ano após ano.',
@@ -88,12 +89,12 @@ review = Review.create!(rate: '4.4', restaurant: r)
 review = Review.create!(rate: '3.1', restaurant: r)
 review = Review.create!(rate: '4.2', restaurant: r)
 prod = Product.create!(name: 'Burrito', price: 19, description: 'Tortilhas com Guacamole',  product_category: pc)
-prod.image.attach(io: File.open('public/images/products/bt.jpg'), filename: 'bt.jpg')
+prod.image.attach(io: File.open(pathMain + '/products/bt.jpg'), filename: 'bt.jpg')
 prod = Product.create!(name: 'Quesadilha', price: 25, description: 'Tortilhas de queijo',  product_category: pc)
-prod.image.attach(io: File.open('public/images/products/quesa.jpeg'), filename: 'quesa.jpeg')
+prod.image.attach(io: File.open(pathMain + '/products/quesa.jpeg'), filename: 'quesa.jpeg')
 
 #Curitiba
-path_image = 'public/images/restaurants/2.jpeg'
+path_image = pathMain + '/restaurants/2.jpeg'
 r = Restaurant.create!(
   name: 'Ola Que Tal - CWB',
   description: 'Para alcançar e manter essa distinção em comida e vinho, serviço, ambiente e ambiente, o restaurante ganha reputação de primeira classe por gastronomia, hospitalidade graciosa e informada, conforto e beleza que atraem clientes novos e repetidos ano após ano.',
@@ -108,12 +109,12 @@ review = Review.create!(rate: '4.1', restaurant: r)
 review = Review.create!(rate: '3.8', restaurant: r)
 review = Review.create!(rate: '4.7', restaurant: r)
 prod = Product.create!(name: 'Burrito', price: 19, description: 'Tortilhas com Guacamole',  product_category: pc)
-prod.image.attach(io: File.open('public/images/products/bt.jpg'), filename: 'bt.jpg')
+prod.image.attach(io: File.open(pathMain + '/products/bt.jpg'), filename: 'bt.jpg')
 prod = Product.create!(name: 'Quesadilha', price: 25, description: 'Tortilhas de queijo',  product_category: pc)
-prod.image.attach(io: File.open('public/images/products/quesa.jpeg'), filename: 'quesa.jpeg')
+prod.image.attach(io: File.open(pathMain + '/products/quesa.jpeg'), filename: 'quesa.jpeg')
 
 # Italian Restaurants
-path_image = 'public/images/restaurants/3.jpeg'
+path_image = pathMain + '/restaurants/3.jpeg'
 r = Restaurant.create!(
   name: 'Bravo',
   description: 'Estamos empenhados em usar os melhores ingredientes em nossas receitas. Nenhum alimento deixa a nossa cozinha que nós mesmos não comeríamos.',
@@ -128,12 +129,12 @@ review = Review.create!(rate: '4.5', restaurant: r)
 review = Review.create!(rate: '3.4', restaurant: r)
 review = Review.create!(rate: '4.6', restaurant: r)
 prod = Product.create!(name: 'Berinjela à parmegiana', price: 78, description: 'Com arroz e fritas',  product_category: pc)
-prod.image.attach(io: File.open('public/images/products/berinjela.jpg'), filename: 'berinjela.jpg')
+prod.image.attach(io: File.open(pathMain + '/products/berinjela.jpg'), filename: 'berinjela.jpg')
 prod = Product.create!(name: 'Fritas', price: 35, description: 'Bata frita com bacon',  product_category: pc)
-prod.image.attach(io: File.open('public/images/products/fritas.jpg'), filename: 'fritas.jpg')
+prod.image.attach(io: File.open(pathMain + '/products/fritas.jpg'), filename: 'fritas.jpg')
 
 #Maceio
-path_image = 'public/images/restaurants/3.jpeg'
+path_image = pathMain + '/restaurants/3.jpeg'
 r = Restaurant.create!(
   name: 'Bravo - Maceio',
   description: 'Estamos empenhados em usar os melhores ingredientes em nossas receitas. Nenhum alimento deixa a nossa cozinha que nós mesmos não comeríamos.',
@@ -148,11 +149,11 @@ review = Review.create!(rate: '4.6', restaurant: r)
 review = Review.create!(rate: '3.7', restaurant: r)
 review = Review.create!(rate: '4.8', restaurant: r)
 prod = Product.create!(name: 'Berinjela à parmegiana', price: 78, description: 'Com arroz e fritas',  product_category: pc)
-prod.image.attach(io: File.open('public/images/products/berinjela.jpg'), filename: 'berinjela.jpg')
+prod.image.attach(io: File.open(pathMain + '/products/berinjela.jpg'), filename: 'berinjela.jpg')
 prod = Product.create!(name: 'Fritas', price: 35, description: 'Bata frita com bacon',  product_category: pc)
-prod.image.attach(io: File.open('public/images/products/fritas.jpg'), filename: 'fritas.jpg')
+prod.image.attach(io: File.open(pathMain + '/products/fritas.jpg'), filename: 'fritas.jpg')
 
-path_image = 'public/images/restaurants/4.jpeg'
+path_image = pathMain + '/restaurants/4.jpeg'
 r = Restaurant.create!(
   name: 'La Pergoletti',
   description: 'Nossa missão é estabelecer relações comerciais benéficas com diversos fornecedores que compartilham nosso compromisso com o atendimento ao cliente, qualidade e preços competitivos.',
@@ -167,12 +168,12 @@ review = Review.create!(rate: '3.8', restaurant: r)
 review = Review.create!(rate: '2.9', restaurant: r)
 review = Review.create!(rate: '1.3', restaurant: r)
 prod = Product.create!(name: 'Fogazza Bacon', price: 12, description: 'Bacon, parmesão e mussarela.',  product_category: pc)
-prod.image.attach(io: File.open('public/images/products/fogazza.jpg'), filename: 'fogazza.jpg')
+prod.image.attach(io: File.open(pathMain + '/products/fogazza.jpg'), filename: 'fogazza.jpg')
 prod = Product.create!(name: 'Fogazza A moda da Casa', price: 12, description: 'Calabresa, bacon, palmito e mussarela.',  product_category: pc)
-prod.image.attach(io: File.open('public/images/products/fogazza.jpg'), filename: 'fogazza.jpg')
+prod.image.attach(io: File.open(pathMain + '/products/fogazza.jpg'), filename: 'fogazza.jpg')
 
 # Japonese Restaurants
-path_image = 'public/images/restaurants/5.jpeg'
+path_image = pathMain + '/restaurants/5.jpeg'
 r = Restaurant.create!(
   name: 'Sushi Eterno',
   description: 'Existimos para garantir que cada hóspede receba um serviço rápido, profissional, amigável e cortês.',
@@ -187,12 +188,12 @@ review = Review.create!(rate: '1.8', restaurant: r)
 review = Review.create!(rate: '2.9', restaurant: r)
 review = Review.create!(rate: '3.3', restaurant: r)
 prod = Product.create!(name: 'Temaki', price: 19.99, description: 'Enrolado de arroz com alga marinha em forma de cone',  product_category: pc)
-prod.image.attach(io: File.open('public/images/products/temaki.jpeg'), filename: 'temaki.jpeg')
+prod.image.attach(io: File.open(pathMain + '/products/temaki.jpeg'), filename: 'temaki.jpeg')
 prod = Product.create!(name: 'Sashimi', price: 30.90, description: 'Peixe cru fatiado, salmao, atum e peixe prego',  product_category: pc)
-prod.image.attach(io: File.open('public/images/products/sashimi.jpg'), filename: 'sashimi.jpg')
+prod.image.attach(io: File.open(pathMain + '/products/sashimi.jpg'), filename: 'sashimi.jpg')
 
 #Maceio
-path_image = 'public/images/restaurants/5.jpeg'
+path_image = pathMain + '/restaurants/5.jpeg'
 r = Restaurant.create!(
   name: 'Sushi Eterno - Maceio',
   description: 'Existimos para garantir que cada hóspede receba um serviço rápido, profissional, amigável e cortês.',
@@ -207,11 +208,11 @@ review = Review.create!(rate: '2.8', restaurant: r)
 review = Review.create!(rate: '4.9', restaurant: r)
 review = Review.create!(rate: '3.3', restaurant: r)
 prod = Product.create!(name: 'Temaki', price: 19.99, description: 'Enrolado de arroz com alga marinha em forma de cone',  product_category: pc)
-prod.image.attach(io: File.open('public/images/products/temaki.jpeg'), filename: 'temaki.jpeg')
+prod.image.attach(io: File.open(pathMain + '/products/temaki.jpeg'), filename: 'temaki.jpeg')
 prod = Product.create!(name: 'Sashimi', price: 30.90, description: 'Peixe cru fatiado, salmao, atum e peixe prego',  product_category: pc)
-prod.image.attach(io: File.open('public/images/products/sashimi.jpg'), filename: 'sashimi.jpg')
+prod.image.attach(io: File.open(pathMain + '/products/sashimi.jpg'), filename: 'sashimi.jpg')
 
-path_image = 'public/images/restaurants/6.jpeg'
+path_image = pathMain + '/restaurants/6.jpeg'
 r = Restaurant.create!(
   name: 'Okuyamah',
   description: 'Restaurante conceituado, vencedor por 5 vezes como melhor restaurante Japones de São Paulo.',
@@ -226,12 +227,12 @@ review = Review.create!(rate: '4.1', restaurant: r)
 review = Review.create!(rate: '2.6', restaurant: r)
 review = Review.create!(rate: '4.5', restaurant: r)
 prod = Product.create!(name: 'Hossomaki 16 unidades', price: 20.90, description: 'Enrolado fino com folha de alga marinha por fora.',  product_category: pc)
-prod.image.attach(io: File.open('public/images/products/hosomaki.jpg'), filename: 'hosomaki.jpg')
+prod.image.attach(io: File.open(pathMain + '/products/hosomaki.jpg'), filename: 'hosomaki.jpg')
 prod = Product.create!(name: 'Hot roll - 10 unidades', price: 12, description: '10 unidades.',  product_category: pc)
-prod.image.attach(io: File.open('public/images/products/hot-holl.jpg'), filename: 'hot-holl.jpg')
+prod.image.attach(io: File.open(pathMain + '/products/hot-holl.jpg'), filename: 'hot-holl.jpg')
 
 #Maceio
-path_image = 'public/images/restaurants/6.jpeg'
+path_image = pathMain + '/restaurants/6.jpeg'
 r = Restaurant.create!(
   name: 'Okuyamah - Maceio',
   description: 'Restaurante conceituado, vencedor por 5 vezes como melhor restaurante Japones de São Paulo.',
@@ -246,12 +247,12 @@ review = Review.create!(rate: '5.0', restaurant: r)
 review = Review.create!(rate: '3.9', restaurant: r)
 review = Review.create!(rate: '1.3', restaurant: r)
 prod = Product.create!(name: 'Hossomaki 16 unidades', price: 20.90, description: 'Enrolado fino com folha de alga marinha por fora.',  product_category: pc)
-prod.image.attach(io: File.open('public/images/products/hosomaki.jpg'), filename: 'hosomaki.jpg')
+prod.image.attach(io: File.open(pathMain + '/products/hosomaki.jpg'), filename: 'hosomaki.jpg')
 prod = Product.create!(name: 'Hot roll - 10 unidades', price: 12, description: '10 unidades.',  product_category: pc)
-prod.image.attach(io: File.open('public/images/products/hot-holl.jpg'), filename: 'hot-holl.jpg')
+prod.image.attach(io: File.open(pathMain + '/products/hot-holl.jpg'), filename: 'hot-holl.jpg')
 
 # Vegan Restaurants
-path_image = 'public/images/restaurants/7.jpeg'
+path_image = pathMain + '/restaurants/7.jpeg'
 r = Restaurant.create!(
   name: 'Club Life',
   description: 'NOSSA ESPECIALIDADE. pratos vegetais de alta qualidade,com opções de alimentos integrais, sem glúten e sem lactose.',
@@ -266,11 +267,11 @@ review = Review.create!(rate: '2.8', restaurant: r)
 review = Review.create!(rate: '4.9', restaurant: r)
 review = Review.create!(rate: '4.1', restaurant: r)
 prod = Product.create!(name: 'Coleslaw', price: 8.99, description: 'Repolho roxo, couve, cenoura, cebola, maionese de castanha e xylitol',  product_category: pc)
-prod.image.attach(io: File.open('public/images/products/coleslaw.jpg'), filename: 'coleslaw.jpg')
+prod.image.attach(io: File.open(pathMain + '/products/coleslaw.jpg'), filename: 'coleslaw.jpg')
 prod = Product.create!(name: 'Side salad', price: 9.90, description: 'Mix de folhas com cenoura ralada, tomatinho sweet e semente de girassol.',  product_category: pc)
-prod.image.attach(io: File.open('public/images/products/side-salad.jpeg'), filename: 'side-salad.jpeg')
+prod.image.attach(io: File.open(pathMain + '/products/side-salad.jpeg'), filename: 'side-salad.jpeg')
 
-path_image = 'public/images/restaurants/8.jpeg'
+path_image = pathMain + '/restaurants/8.jpeg'
 r = Restaurant.create!(
   name: 'Casa Natural',
   description: 'Oferecemos, desde 1981, refeições ovo-lacto-vegetarianas, leves, saudáveis, balanceadas e principalmente saborosas, procurando aliar o sabor, a qualidade de vida e o bem-estar dos clientes.',
@@ -285,12 +286,12 @@ review = Review.create!(rate: '4.1', restaurant: r)
 review = Review.create!(rate: '3.5', restaurant: r)
 review = Review.create!(rate: '4.2', restaurant: r)
 prod = Product.create!(name: 'Salada de quinoa', price: 20.90, description: 'Alface americana, roxa, frisee, quinoa cozida, cenoura, tomate, damasco dessecado, amendoa crua.',  product_category: pc)
-prod.image.attach(io: File.open('public/images/products/salada-de-quinoa.jpg'), filename: 'salada-de-quinoa.jpg')
+prod.image.attach(io: File.open(pathMain + '/products/salada-de-quinoa.jpg'), filename: 'salada-de-quinoa.jpg')
 prod = Product.create!(name: 'Coleslaw', price: 11, description: 'Repolho roxo, couve, cenoura, cebola, maionese de castanha e xylitol',  product_category: pc)
-prod.image.attach(io: File.open('public/images/products/coleslaw2.jpeg'), filename: 'coleslaw2.jpeg')
+prod.image.attach(io: File.open(pathMain + '/products/coleslaw2.jpeg'), filename: 'coleslaw2.jpeg')
 
 # Vegan Restaurants
-path_image = 'public/images/restaurants/7.jpeg'
+path_image = pathMain + '/restaurants/7.jpeg'
 r = Restaurant.create!(
   name: 'Porcão - BH',
   description: 'NOSSA ESPECIALIDADE. pratos vegetais de alta qualidade,com opções de alimentos integrais, sem glúten e sem lactose.',
@@ -305,11 +306,11 @@ review = Review.create!(rate: '2.8', restaurant: r)
 review = Review.create!(rate: '4.9', restaurant: r)
 review = Review.create!(rate: '4.1', restaurant: r)
 prod = Product.create!(name: 'Coleslaw', price: 8.99, description: 'Repolho roxo, couve, cenoura, cebola, maionese de castanha e xylitol',  product_category: pc)
-prod.image.attach(io: File.open('public/images/products/coleslaw.jpg'), filename: 'coleslaw.jpg')
+prod.image.attach(io: File.open(pathMain + '/products/coleslaw.jpg'), filename: 'coleslaw.jpg')
 prod = Product.create!(name: 'Side salad', price: 9.90, description: 'Mix de folhas com cenoura ralada, tomatinho sweet e semente de girassol.',  product_category: pc)
-prod.image.attach(io: File.open('public/images/products/side-salad.jpeg'), filename: 'side-salad.jpeg')
+prod.image.attach(io: File.open(pathMain + '/products/side-salad.jpeg'), filename: 'side-salad.jpeg')
 
-path_image = 'public/images/restaurants/8.jpeg'
+path_image = pathMain + '/restaurants/8.jpeg'
 r = Restaurant.create!(
   name: 'Porcão - Itaúna',
   description: 'Oferecemos, desde 1981, refeições ovo-lacto-vegetarianas, leves, saudáveis, balanceadas e principalmente saborosas, procurando aliar o sabor, a qualidade de vida e o bem-estar dos clientes.',
@@ -324,12 +325,12 @@ review = Review.create!(rate: '4.1', restaurant: r)
 review = Review.create!(rate: '3.5', restaurant: r)
 review = Review.create!(rate: '4.2', restaurant: r)
 prod = Product.create!(name: 'Salada de quinoa', price: 20.90, description: 'Alface americana, roxa, frisee, quinoa cozida, cenoura, tomate, damasco dessecado, amendoa crua.',  product_category: pc)
-prod.image.attach(io: File.open('public/images/products/salada-de-quinoa.jpg'), filename: 'salada-de-quinoa.jpg')
+prod.image.attach(io: File.open(pathMain + '/products/salada-de-quinoa.jpg'), filename: 'salada-de-quinoa.jpg')
 prod = Product.create!(name: 'Coleslaw', price: 11, description: 'Repolho roxo, couve, cenoura, cebola, maionese de castanha e xylitol',  product_category: pc)
-prod.image.attach(io: File.open('public/images/products/coleslaw2.jpeg'), filename: 'coleslaw2.jpeg')
+prod.image.attach(io: File.open(pathMain + '/products/coleslaw2.jpeg'), filename: 'coleslaw2.jpeg')
 
 # Italian Restaurants
-path_image = 'public/images/restaurants/8.jpeg'
+path_image = pathMain + '/restaurants/8.jpeg'
 r = Restaurant.create!(
   name: 'Usina Hamburgueria',
   description: 'Estamos empenhados em usar os melhores ingredientes em nossas receitas. Nenhum alimento deixa a nossa cozinha que nós mesmos não comeríamos.',
@@ -344,6 +345,6 @@ review = Review.create!(rate: '4.5', restaurant: r)
 review = Review.create!(rate: '3.4', restaurant: r)
 review = Review.create!(rate: '4.6', restaurant: r)
 prod = Product.create!(name: 'Hamburguer Choripan', price: 78, description: 'Carne de porco, ovos, queijo cheddar',  product_category: pc)
-prod.image.attach(io: File.open('public/images/products/choripan.jpeg'), filename: 'choripan.jpeg')
+prod.image.attach(io: File.open(pathMain + '/products/choripan.jpeg'), filename: 'choripan.jpeg')
 prod = Product.create!(name: 'Fritas + Bacon', price: 35, description: 'Batata frita com bacon',  product_category: pc)
-prod.image.attach(io: File.open('public/images/products/fritas-bacon.jpg'), filename: 'fritas-bacon.jpg')
+prod.image.attach(io: File.open(pathMain + '/products/fritas-bacon.jpg'), filename: 'fritas-bacon.jpg')
